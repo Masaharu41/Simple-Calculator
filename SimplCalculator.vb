@@ -1,13 +1,13 @@
-﻿Option Explicit On
-Option Strict On
-'Owen Fujii
+﻿'Owen Fujii
 'RCET 1265
 'Spring 2024
 'Simple Calculator
 'https://github.com/Masaharu41/Simple-Calculator.git 
 
-Imports Microsoft.VisualBasic.ApplicationServices
+'Imports Microsoft.VisualBasic.ApplicationServices
 
+Option Explicit On
+Option Strict On
 Module SimplCalculator
 
     Sub Main()
@@ -17,27 +17,24 @@ Module SimplCalculator
         Dim userInput As String
 
         'Take user input numbers
-        Console.WriteLine("First Numeric Input:")
-        num1 = Console.ReadLine()
-        Console.WriteLine("Second Numeric Input:")
-        num2 = Console.ReadLine()
+        Console.Write("First Numeric Input:")
+        num1 = CInt(Console.ReadLine())
+        Console.Write("Second Numeric Input:")
+        num2 = CInt(Console.ReadLine())
 
-        Console.WriteLine("Operation Type" & vbNewLine _
+        Console.Write("Operation Type" & vbNewLine _
                           & "1. Product" & vbNewLine _
                           & "2. Sum" & vbNewLine)
 
-        userInput = Console.ReadLine() As String
+        userInput = Console.ReadLine()
 
-        If userInput = "P" Then
-            Console.WriteLine($"{num1} * {num2}")
-
-        ElseIf userInput = "S" Then
-            Console.WriteLine($"{num1} + {num2}")
-
+        If userInput = "1" Then
+            Console.Write($"{num1} * {num2} = ")
+            Console.WriteLine(num1 * num2)
+        ElseIf userInput = "2" Then
+            Console.Write($"{num1} + {num2} = ")
+            Console.WriteLine(num1 + num2)
         End If
-
-
-        Console.WriteLine($"You have {num1} & {num2}")
 
         Console.Read()
 
