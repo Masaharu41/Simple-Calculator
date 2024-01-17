@@ -22,12 +22,13 @@ Module SimplCalculator
         Console.Write("Second Numeric Input:")
         num2 = CInt(Console.ReadLine())
 
+        'Give user options
         Console.Write("Operation Type" & vbNewLine _
                           & "1. Product" & vbNewLine _
                           & "2. Sum" & vbNewLine)
 
         userInput = Console.ReadLine()
-
+        'Complete operations
         If userInput = "1" Then
             Console.Write($"{num1} * {num2} = ")
             Console.WriteLine(num1 * num2)
